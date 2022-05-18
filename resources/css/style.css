@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-image: url(../imagenes/raining-money-8.gif);
+}
+h1{
+ text-align: center;
+}
+
+.form_simulador_fija{
+    width: 27em;
+    background: #24303c;
+    padding: 3em;
+    margin: auto;
+    margin-top: 1em;
+    border-radius: 0.4em ;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: beige;
+    box-shadow: 0.7em 1.3em 3.7em #000;
+}
+.form_simulador_fija h4{
+    font-size: 2.2em;
+    margin-bottom: 1em;
+}
+.controls{
+    width: 25em;
+    background: #24303c;
+    padding: 0.4em;
+    border-radius: 4px;
+    margin-bottom: 0.6em;
+    color: aliceblue;
+}
+.form_simulador_fija p{
+    height: 1.5em;
+    color: white;
+    text-decoration: none;
+
+}
+.form_simulador_fija a{
+    
+    color: white;
+    text-decoration: none;
+
+}
+.form_simulador_fija a:hover{
+    
+    color: white;
+    text-decoration: underline;
+
+}
+.form_simulador_fija .botons{
+    width: 100%;
+    background: #1f53c5;
+    border: none;
+    padding: 1.2em;
+    color: white;
+    margin:1em 0;
+    font-size: 1em;
+}
+footer{
+    text-align: center;
+}

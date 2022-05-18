@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador prendario</title>
+
+    <link rel="stylesheet" href="../resources/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Bienvenido al simulador de credito</h1>
+    </header>
+    <main>
+        <section class="form_simulador_fija">
+            <h1 id="resultado_operacion_final">estas a un paso de tu prestamo  </h1>
+        </section>
+        
+        <section class="form_simulador_fija">
+            <h4>complete lo siguientes datos</h4>
+
+            <input class="controls" type="text" name="nombreCompleto" id="nombreCompleto"
+                placeholder="¿Cual es tu nombre completo?">
+            <input class="controls" type="text" name="apellidoCompleto" id="apellidoCompleto"
+                placeholder="¿Cual es tu apellido?">
+            <input class="controls" type="number" name="numeroTelefonico" id="numeroTelefonico"
+                placeholder="¿Cual es tu telefono?">
+            <input class="controls" type="email" name="correoElectronico" id="correoElectronico"
+                placeholder="¿Cual es tu correo electronico?">
+            <input class="botons" type="submit" onclick="datos()">
+            <a href="../index.html">¿te equivocaste? no te procupes, da click aca para volver</a>
+        </section>
+    </main>
+    <footer>
+        <p>todos los derechos son reservados 2022</p>
+    </footer>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="../resources/javaScript/main.js"> </script>
+</body>
+
+
+</html>
