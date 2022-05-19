@@ -17,7 +17,6 @@ const Santander = 55.5 / 100;
 
 let $bancosSeleccion = document.getElementById('bancosSeleccion');
 let bancos = ['UVA', 'Especial', 'IUDU', 'Santander']
-console.log(bancos)
 function mostrarBancos(arreglo, lugar) {
     let elementos = '<option selected disables>--Seleccione--</option>'
     for (let i = 0; i < arreglo.length; i++) {
@@ -31,8 +30,7 @@ mostrarBancos(bancos, $bancosSeleccion);
 function Cliente(dinero,cuotas,bancosSeleccion){
     this.dinero =dinero;
     this.cuotas=cuotas;
-    this.bancosSeleccion=bancosSeleccion;
-    
+    this.bancosSeleccion=bancosSeleccion;  
 }
 
 function tipoDePrestamo() {
