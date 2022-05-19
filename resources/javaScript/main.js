@@ -1,5 +1,5 @@
 /* objetivos:
-1.objetos y arrays. metodos de arrays
+1.objetos y arrays. metodos de arrays !completado!
 2.funciones y condicionales ¡COMPLETADO!
 3.generacion del DOM  dew forma denamiuca. eventos ¡COMPLETADO!
 4.sintaxis avanzada 
@@ -9,16 +9,33 @@
 */
 
 
-/* declarando constantes base */
 const UVA = 18 / 100;
 const Especial = 36 / 100;
 const IUDU = 50 / 100;
 const Santander = 55.5 / 100;
-setTimeout(()=>{
-  console.log("hola curioso, ¿estas perdido, o eres programador?")
-},5000)
-/* recolecion de datos*/
-function bancos() {
+
+
+let $bancosSeleccion = document.getElementById('bancosSeleccion');
+let bancos = ['UVA', 'Especial', 'IUDU', 'Santander']
+console.log(bancos)
+function mostrarBancos(arreglo, lugar) {
+    let elementos = '<option selected disables>--Seleccione--</option>'
+    for (let i = 0; i < arreglo.length; i++) {
+        elementos += '<option value="' + arreglo[i] + '"> ' + arreglo[i] + ' </option>'
+    }
+    lugar.innerHTML = elementos
+}
+
+mostrarBancos(bancos, $bancosSeleccion);
+/* objeto (clientes) */
+function Cliente(dinero,cuotas,bancosSeleccion){
+    this.dinero =dinero;
+    this.cuotas=cuotas;
+    this.bancosSeleccion=bancosSeleccion;
+    
+}
+
+function tipoDePrestamo() {
     let dinero = parseInt(document.getElementById("dinero_a_prestar").value);
     let cuotas = parseInt(document.getElementById("cantidad_de_cuotas").value);
     let bancosSeleccion = document.getElementById("bancosSeleccion").value;
@@ -60,6 +77,8 @@ function bancos() {
     console.log(localStorage.getItem("dinero_solicitado"));
     console.log(localStorage.getItem("cantidad_de_coutas"));
     console.log(localStorage.getItem("banco_seleccionado"));
+    const cliente2 = new Cliente(dinero,cuotas,bancosSeleccion);
+    console.log(cliente2)
 }
 
 /* recolecion de datos del interesado */
