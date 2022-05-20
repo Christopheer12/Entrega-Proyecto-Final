@@ -79,6 +79,12 @@ let tipoDePrestamo = () => {
 }
 
 /* recolecion de datos del interesado */
+function Clientedatos(nombreCompleto, apellidoCompleto, numeroTelefonico,correoElectronico) {
+    this.nombreCompleto = nombreCompleto;
+    this.apellidoCompleto = apellidoCompleto;
+    this.numeroTelefonico = numeroTelefonico;
+    this.correoElectronico = correoElectronico;
+}
 function datos() {
     let nombreCompleto = document.getElementById("nombreCompleto").value;
     let apellidoCompleto = document.getElementById("apellidoCompleto").value;
@@ -111,6 +117,7 @@ function datos() {
     console.log(localStorage.getItem("correo Electronico"));
     JSON.stringify(datos);
 
-
+    const cliented = new Clientedatos(nombreCompleto, apellidoCompleto, numeroTelefonico,correoElectronico);
+    console.log(cliented)
 }
 
