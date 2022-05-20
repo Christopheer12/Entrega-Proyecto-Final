@@ -63,8 +63,6 @@ let tipoDePrestamo = () => {
             let finalPorMesSantander = cuotasMenualesSantander + interesesSantander
             swal("Felicidades, tu credito fue aprobado:", ` ${finalPorMesSantander} sea tu cuota fija por mes`, "success");
             break;
-        case "Seleccione":
-            swal("incompleto", "seleccione una opcion valida", "error");
     }
 
     /* almacenamiento en storage */
