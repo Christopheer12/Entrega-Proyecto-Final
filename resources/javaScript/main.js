@@ -1,8 +1,8 @@
 /* objetivos:
-1.objetos y arrays. metodos de arrays !completado!
+1.objetos y arrays. metodos de arrays ¡COMPLETADO!
 2.funciones y condicionales ¡COMPLETADO!
 3.generacion del DOM  dew forma denamiuca. eventos ¡COMPLETADO!
-4.sintaxis avanzada 
+4.sintaxis avanzada ¡COMPLETADO!
 5.al menos una libreria de uso relevante para el proyecto ¡COMPLETADO!
 6.manejo de promesas con fetch
 7. carga de datos desde un JSON local o desde una API externa
@@ -27,13 +27,13 @@ function mostrarBancos(arreglo, lugar) {
 
 mostrarBancos(bancos, $bancosSeleccion);
 /* objeto (clientes) */
-function Cliente(dinero,cuotas,bancosSeleccion){
-    this.dinero =dinero;
-    this.cuotas=cuotas;
-    this.bancosSeleccion=bancosSeleccion;  
+function Cliente(dinero, cuotas, bancosSeleccion) {
+    this.dinero = dinero;
+    this.cuotas = cuotas;
+    this.bancosSeleccion = bancosSeleccion;
 }
 
-let tipoDePrestamo =()=> {
+let tipoDePrestamo = () => {
     let dinero = parseInt(document.getElementById("dinero_a_prestar").value);
     let cuotas = parseInt(document.getElementById("cantidad_de_cuotas").value);
     let bancosSeleccion = document.getElementById("bancosSeleccion").value;
@@ -67,14 +67,14 @@ let tipoDePrestamo =()=> {
             swal("incompleto", "seleccione una opcion valida", "error");
     }
 
-/* almacenamiento en storage */
+    /* almacenamiento en storage */
     localStorage.setItem("dinero_solicitado", dinero);
     localStorage.setItem("cantidad_de_coutas", cuotas);
     localStorage.setItem("banco_seleccionado", bancosSeleccion);
     console.log(localStorage.getItem("dinero_solicitado"));
     console.log(localStorage.getItem("cantidad_de_coutas"));
     console.log(localStorage.getItem("banco_seleccionado"));
-    const cliente2 = new Cliente(dinero,cuotas,bancosSeleccion);
+    const cliente2 = new Cliente(dinero, cuotas, bancosSeleccion);
     console.log(cliente2)
 }
 
@@ -90,17 +90,17 @@ function datos() {
         icon: "warning",
         buttons: true,
         dangerMode: true,
-      })
-      .then((willDelete) => {
-        if (willDelete) {
-          swal("En buena hora tio, nos a vendido tu alm... por varios meses", {
-            icon: "success",
-          });
-        } else {
-          swal("Poof! gallina, cancelaste la operacion");
-        }
-      });
-      /* almacenamiento de datos interesado */
+    })
+        .then((willDelete) => {
+            if (willDelete) {
+                swal("En buena hora tio, nos a vendido tu alm... por varios meses", {
+                    icon: "success",
+                });
+            } else {
+                swal("Poof! gallina, cancelaste la operacion");
+            }
+        });
+    /* almacenamiento de datos interesado */
     localStorage.setItem("nombre Completo", nombreCompleto);
     localStorage.setItem("apellido Completos", apellidoCompleto);
     localStorage.setItem("numero Telefonico", numeroTelefonico);
@@ -109,7 +109,7 @@ function datos() {
     console.log(localStorage.getItem("apellido Completos"));
     console.log(localStorage.getItem("numero Telefonico"));
     console.log(localStorage.getItem("correo Electronico"));
-JSON.stringify(datos);
+    JSON.stringify(datos);
 
 
 }
