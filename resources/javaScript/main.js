@@ -14,7 +14,7 @@ const Especial = 36 / 100;
 const IUDU = 50 / 100;
 const Santander = 55.5 / 100;
 
-/* opciones */
+/* opciones de prestador */
 let $bancosSeleccion = document.getElementById('bancosSeleccion');
 let bancos = ['UVA', 'Especial', 'IUDU', 'Santander']
 function mostrarBancos(arreglo, lugar) {
@@ -78,13 +78,15 @@ let tipoDePrestamo = () => {
     console.log(deuda1)
 }
 
-/* recolecion de datos del interesado */
+
+/* objeto2 (datos clientes) */
 function Clientedatos(nombreCompleto, apellidoCompleto, numeroTelefonico,correoElectronico) {
     this.nombreCompleto = nombreCompleto;
     this.apellidoCompleto = apellidoCompleto;
     this.numeroTelefonico = numeroTelefonico;
     this.correoElectronico = correoElectronico;
 }
+/* recolecion de datos del interesado */
 function datos() {
     let nombreCompleto = document.getElementById("nombreCompleto").value;
     let apellidoCompleto = document.getElementById("apellidoCompleto").value;
