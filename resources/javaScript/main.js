@@ -8,13 +8,13 @@
 7. carga de datos desde un JSON local o desde una API externa
 */
 
-
+/* constantes iniciales */
 const UVA = 18 / 100;
 const Especial = 36 / 100;
 const IUDU = 50 / 100;
 const Santander = 55.5 / 100;
 
-
+/* opciones */
 let $bancosSeleccion = document.getElementById('bancosSeleccion');
 let bancos = ['UVA', 'Especial', 'IUDU', 'Santander']
 function mostrarBancos(arreglo, lugar) {
@@ -26,8 +26,8 @@ function mostrarBancos(arreglo, lugar) {
 }
 
 mostrarBancos(bancos, $bancosSeleccion);
-/* objeto (clientes) */
-function Cliente(dinero, cuotas, bancosSeleccion) {
+/* objeto1 (deuda) */
+function deuda(dinero, cuotas, bancosSeleccion) {
     this.dinero = dinero;
     this.cuotas = cuotas;
     this.bancosSeleccion = bancosSeleccion;
@@ -74,8 +74,8 @@ let tipoDePrestamo = () => {
     console.log(localStorage.getItem("dinero_solicitado"));
     console.log(localStorage.getItem("cantidad_de_coutas"));
     console.log(localStorage.getItem("banco_seleccionado"));
-    const cliente2 = new Cliente(dinero, cuotas, bancosSeleccion);
-    console.log(cliente2)
+    const deuda1 = new deuda(dinero, cuotas, bancosSeleccion);
+    console.log(deuda1)
 }
 
 /* recolecion de datos del interesado */
@@ -117,7 +117,7 @@ function datos() {
     console.log(localStorage.getItem("correo Electronico"));
     JSON.stringify(datos);
 
-    const cliented = new Clientedatos(nombreCompleto, apellidoCompleto, numeroTelefonico,correoElectronico);
-    console.log(cliented)
+    const cliente = new Clientedatos(nombreCompleto, apellidoCompleto, numeroTelefonico,correoElectronico);
+    console.log(cliente)
 }
 
