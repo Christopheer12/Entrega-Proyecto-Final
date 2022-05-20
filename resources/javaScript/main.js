@@ -33,7 +33,7 @@ function Cliente(dinero,cuotas,bancosSeleccion){
     this.bancosSeleccion=bancosSeleccion;  
 }
 
-function tipoDePrestamo() {
+let tipoDePrestamo =()=> {
     let dinero = parseInt(document.getElementById("dinero_a_prestar").value);
     let cuotas = parseInt(document.getElementById("cantidad_de_cuotas").value);
     let bancosSeleccion = document.getElementById("bancosSeleccion").value;
@@ -65,7 +65,6 @@ function tipoDePrestamo() {
             break;
         case "Seleccione":
             swal("incompleto", "seleccione una opcion valida", "error");
-
     }
 
 /* almacenamiento en storage */
