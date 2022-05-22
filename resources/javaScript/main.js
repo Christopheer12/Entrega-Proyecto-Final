@@ -7,6 +7,14 @@
 6.manejo de promesas con fetch
 7. carga de datos desde un JSON local o desde una API externa
 */
+/* cierre de sesion */
+setTimeout(()=>{
+    swal("te quedan 5 minutos!", "tu sesion, junto con la informacion se va a reiniciar!", "warning");
+    
+},300000)
+setTimeout(()=>{
+    location.reload();
+},600000)
 
 /* constantes iniciales */
 const UVA = 18 / 100;
