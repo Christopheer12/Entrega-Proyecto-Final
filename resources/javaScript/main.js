@@ -50,7 +50,6 @@ let tipoDePrestamo = () => {
         setTimeout(() => {
             dinero<50000 ? resolver(dinero) :reject(new Error(swal("Nuestro prestamos son hasta 500.000 Arg")))
         },100)
-     
          })
     let cuotas = parseInt(document.getElementById("cantidad_de_cuotas").value);
     let bancosSeleccion = document.getElementById("bancosSeleccion").value;
