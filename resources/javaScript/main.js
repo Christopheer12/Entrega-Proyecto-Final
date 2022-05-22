@@ -8,6 +8,7 @@
 7. carga de datos desde un JSON local o desde una API externa
 */
 /* cierre de sesion */
+
 setTimeout(()=>{
     swal("te quedan 5 minutos!", "tu sesion, junto con la informacion se va a reiniciar!", "warning");
     
@@ -15,6 +16,7 @@ setTimeout(()=>{
 setTimeout(()=>{
     location.reload();
 },600000)
+
 
 /* constantes iniciales */
 const UVA = 18 / 100;
@@ -42,7 +44,14 @@ function deuda(dinero, cuotas, bancosSeleccion) {
 }
 
 let tipoDePrestamo = () => {
+    
     let dinero = parseInt(document.getElementById("dinero_a_prestar").value);
+    const limiteDePrestamo = new Promise ((resolver, reject)=>{
+        setTimeout(() => {
+            dinero<50000 ? resolver(dinero) :reject(new Error(swal("Nuestro prestamos son hasta 500.000 Arg")))
+        },100)
+     
+         })
     let cuotas = parseInt(document.getElementById("cantidad_de_cuotas").value);
     let bancosSeleccion = document.getElementById("bancosSeleccion").value;
     /* tipo de operaciones */
