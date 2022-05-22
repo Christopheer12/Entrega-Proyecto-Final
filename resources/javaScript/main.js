@@ -35,6 +35,7 @@ function mostrarBancos(arreglo, lugar) {
     lugar.innerHTML = elementos
 }
 
+
 mostrarBancos(bancos, $bancosSeleccion);
 /* objeto1 (deuda) */
 function deuda(dinero, cuotas, bancosSeleccion) {
