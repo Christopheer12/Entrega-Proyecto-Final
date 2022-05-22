@@ -4,7 +4,7 @@
 3.generacion del DOM  dew forma denamiuca. eventos ¡COMPLETADO!
 4.sintaxis avanzada ¡COMPLETADO!
 5.al menos una libreria de uso relevante para el proyecto ¡COMPLETADO!
-6.manejo de promesas con fetch
+6.manejo de promesas con fetch¡Completado!
 7. carga de datos desde un JSON local o desde una API externa
 */
 /* cierre de sesion */
