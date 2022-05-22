@@ -48,10 +48,16 @@ let tipoDePrestamo = () => {
     let dinero = parseInt(document.getElementById("dinero_a_prestar").value);
     const limiteDePrestamo = new Promise ((resolver, reject)=>{
         setTimeout(() => {
-            dinero<50000 ? resolver(dinero) :reject(new Error(swal("Nuestro prestamos son hasta 500.000 Arg")))
+            dinero<50000 ? resolver(dinero) :reject(new Error(swal("Nuestro prestamos son hasta 500.000 Arg",  "", "error")))
         },100)
          })
     let cuotas = parseInt(document.getElementById("cantidad_de_cuotas").value);
+    const limiteDeCoutas = new Promise ((resolver, reject)=>{
+        setTimeout(() => {
+            cuotas<61 ? resolver(cuotas) :reject(new Error(swal("la maxima cantidad de cuotas es 60 cuotas",  "", "error")))
+        },2000)
+         })
+   
     let bancosSeleccion = document.getElementById("bancosSeleccion").value;
     /* tipo de operaciones */
     switch (bancosSeleccion) {
