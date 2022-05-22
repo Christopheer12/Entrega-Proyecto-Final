@@ -10,7 +10,13 @@ body{
 h1{
  text-align: center;
 }
-
+a{
+    color: green;
+}
+.fotoo{
+    text-align: center;
+    margin: 1px;
+}
 .form_simulador_fija{
     width: 27em;
     background: #24303c;

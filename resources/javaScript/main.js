@@ -7,6 +7,7 @@
 6.manejo de promesas con fetch¡Completado!
 7. carga de datos desde un JSON local o desde una API externa
 */
+
 /* cierre de sesion */
 
 setTimeout(()=>{
@@ -17,7 +18,27 @@ setTimeout(()=>{
     location.reload();
 },600000)
 
+const banner_personas = document.querySelector(".banner_personas");
+const ramdonPerson =()=>{
+fetch("https://randomuser.me/api")
+.then(response => response.json())
+.then((result)=>{
+    let datos = result.results;
+    datos.forEach(user =>{
+        banner_personas.innerHTML = `
+        <h2 class="fotoo">hoy sacaron su credito :</h2>
+        <p class="fotoo" >${user.name.first}</p>
+        <div class="fotoo"><img src="${user.picture.medium}"></div>
+        <p class="fotoo" >${user.name.last}</p>
+        <p class="fotoo">${user.dob.age} años, se feliz como ellos</p>
+        <p class="fotoo">(antes de que llegue la primera cuota)</p>
+    
+        `
+    })
+})
+}
 
+ramdonPerson();
 /* constantes iniciales */
 const UVA = 18 / 100;
 const Especial = 36 / 100;
